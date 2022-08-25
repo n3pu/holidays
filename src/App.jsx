@@ -4,6 +4,12 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  let date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth();
+  let year = date.getFullYear();
+
+  const months = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
 
   return (
     <div className="App">
@@ -16,6 +22,8 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <h2>{day}\{month}\{year}</h2>
+      <h3>{months[month]}</h3>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
