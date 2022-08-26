@@ -1,0 +1,9 @@
+td, th {
+  height: 26px;
+  width: 26px;
+  background: #000;
+}
+
+.weekend {
+  background-color: #ff6464;
+}
