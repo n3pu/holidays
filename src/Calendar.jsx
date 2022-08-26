@@ -12,7 +12,11 @@ function Calendar() {
   const daysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31];
 
   const numbers = [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  const weekdays = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S',];
 
+  const weekItems = weekdays.map((weekday) =>
+    <th>{weekday}</th>
+  );
   const isWeekend = (number) => {
     return number % 7 === 1 || number % 7 === 0;
   }
@@ -27,15 +31,7 @@ function Calendar() {
       <h2>{fullToday}</h2>
       <h3>{months[month]}</h3>
       <table>
-        <tr>
-          <th>D</th>
-          <th>S</th>
-          <th>T</th>
-          <th>Q</th>
-          <th>Q</th>
-          <th>S</th>
-          <th>S</th>
-        </tr>
+        <tr>{weekItems}</tr>
         <tr>{listItems}</tr>
       </table>
     </>
